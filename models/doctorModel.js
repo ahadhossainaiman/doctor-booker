@@ -7,6 +7,10 @@ const schema = mongoose.Schema(
       ref: "User",
       required: true,
     },
+    hospitalName: {
+      type: String,
+      required: true,
+    },
     specialization: {
       type: String,
       required: true,

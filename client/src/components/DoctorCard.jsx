@@ -7,13 +7,13 @@ const DoctorCard = ({ ele }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token") || "");
 
-const handleModal=()=>{
-  if(token==""){
-    return toast.error('You must log in first')
-  }
-  setModalOpen(true)
-}
-
+  const handleModal = () => {
+    if (token == "") {
+      return toast.error("You must log in first");
+    }
+    setModalOpen(true);
+  };
+  console.log(ele);
   return (
     <div className={`card`}>
       <div className={`card-img flex-center`}>
@@ -29,6 +29,10 @@ const handleModal=()=>{
         Dr. {ele?.userId?.firstname + " " + ele?.userId?.lastname}
       </h3>
       <p className="specialization">
+        <strong>Hospital Name: </strong>
+        {ele?.hospitalName}
+      </p>
+      <p className="specialization">
         <strong>Specialization: </strong>
         {ele?.specialization}
       </p>
@@ -37,24 +41,16 @@ const handleModal=()=>{
         {ele?.experience}yrs
       </p>
       <p className="fees">
-        <strong>Fees per consultation: </strong>$ {ele?.fees}
+        <strong>Fees per consultation: </strong>৳ {ele?.fees}
       </p>
       <p className="phone">
         <strong>Phone: </strong>
         {ele?.userId?.mobile}
       </p>
-      <button
-        className="btn appointment-btn"
-        onClick={handleModal}
-      >
+      <button className="btn appointment-btn" onClick={handleModal}>
         Book Appointment
       </button>
-      {modalOpen && (
-        <BookAppointment
-          setModalOpen={setModalOpen}
-          ele={ele}
-        />
-      )}
+      {modalOpen && <BookAppointment setModalOpen={setModalOpen} ele={ele} />}
     </div>
   );
 };

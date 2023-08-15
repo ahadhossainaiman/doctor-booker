@@ -11,6 +11,7 @@ import Empty from "../components/Empty";
 
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
+  // new
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.root);
 
@@ -31,16 +32,11 @@ const Doctors = () => {
       {loading && <Loading />}
       {!loading && (
         <section className="container doctors">
-          <h2 className="page-heading">Our Doctors</h2>
+          <h2 className="page-heading">Our Doctorss</h2>
           {doctors.length > 0 ? (
             <div className="doctors-card-container">
               {doctors.map((ele) => {
-                return (
-                  <DoctorCard
-                    ele={ele}
-                    key={ele._id}
-                  />
-                );
+                return <DoctorCard ele={ele} key={ele._id} />;
               })}
             </div>
           ) : (

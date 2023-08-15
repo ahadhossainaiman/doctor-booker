@@ -11,11 +11,12 @@ axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 const ApplyDoctor = () => {
   const navigate = useNavigate();
   const [formDetails, setFormDetails] = useState({
+    hospitalName: "",
     specialization: "",
     experience: "",
     fees: "",
   });
-
+  console.log(formDetails);
   const inputChange = (e) => {
     const { name, value } = e.target;
     return setFormDetails({
@@ -64,6 +65,14 @@ const ApplyDoctor = () => {
           <form className="register-form ">
             <input
               type="text"
+              name="hospitalName"
+              className="form-input"
+              placeholder="Enter your hospitalName"
+              value={formDetails.hospitalName}
+              onChange={inputChange}
+            />
+            <input
+              type="text"
               name="specialization"
               className="form-input"
               placeholder="Enter your specialization"
@@ -86,11 +95,7 @@ const ApplyDoctor = () => {
               value={formDetails.fees}
               onChange={inputChange}
             />
-            <button
-              type="submit"
-              className="btn form-btn"
-              onClick={btnClick}
-            >
+            <button type="submit" className="btn form-btn" onClick={btnClick}>
               apply
             </button>
           </form>

@@ -7,6 +7,7 @@ axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
 function DoctorApply() {
   const [formDetails, setFormDetails] = useState({
+    hospitalName: "",
     specialization: "",
     experience: "",
     fees: "",
@@ -24,7 +25,8 @@ function DoctorApply() {
   const formSubmit = async (e) => {
     try {
       e.preventDefault();
-      const { specialization, experience, fees, timing } = formDetails;
+      const { hospitalName, specialization, experience, fees, timing } =
+        formDetails;
 
       if (!specialization || !experience || !fees || !timing) {
         return toast.error("Input field should not be empty");
@@ -34,6 +36,7 @@ function DoctorApply() {
           "/doctor/applyfordoctor",
 
           {
+            hospitalName,
             specialization,
             experience,
             fees,
@@ -62,6 +65,14 @@ function DoctorApply() {
       <div className="apply-doctor-container flex-center">
         <h2 className="form-heading">Apply For Doctor</h2>
         <form onSubmit={formSubmit} className="register-form">
+          <input
+            type="text"
+            name="hospitalName"
+            className="form-input"
+            placeholder="Enter your hospitalName"
+            value={formDetails.hospitalName}
+            onChange={inputChange}
+          />
           <input
             type="text"
             name="specialization"

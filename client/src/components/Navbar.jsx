@@ -33,10 +33,13 @@ const Navbar = () => {
         </h2>
         <ul className="nav-links">
           <li>
-            <NavLink to={"/"}>Home1</NavLink>
+            <NavLink to={"/"}>Home</NavLink>
           </li>
           <li>
             <NavLink to={"/doctors"}>Doctors</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/searchDoctors"}>Search Doctors</NavLink>
           </li>
           {token && user.isAdmin && (
             <li>
