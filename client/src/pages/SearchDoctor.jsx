@@ -7,6 +7,7 @@ import Empty from "../components/Empty";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import Navbar from "../components/Navbar";
+import "../styles/doctors.css";
 
 const SearchDoctor = () => {
   const [doctors, setDoctors] = useState([]);
@@ -55,7 +56,23 @@ const SearchDoctor = () => {
         {!loading && (
           <section className="container doctors">
             <h2 className="page-heading">Our Doctorss</h2>
-            <form onSubmit={handleFormSubmit}>
+            <div class="wrap">
+              <div>
+                <form action="" className="search">
+                  <input
+                    type="text"
+                    className="searchTerm"
+                    placeholder="Search by name or hospital"
+                    value={searchTerm}
+                    onChange={handleSearchTermChange}
+                  />
+                  <button type="submit" className="searchButton">
+                    Reset
+                  </button>
+                </form>
+              </div>
+            </div>
+            {/* <form onSubmit={handleFormSubmit}>
               <input
                 type="text"
                 placeholder="Search by name or hospital"
@@ -63,7 +80,7 @@ const SearchDoctor = () => {
                 onChange={handleSearchTermChange}
               />
               <button type="submit">Reset</button>
-            </form>
+            </form> */}
             {doctors.length > 0 ? (
               <div className="doctors-card-container">
                 {searchResults?.map((ele) => {

@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className={iconActive ? "nav-active" : ""}>
-        <h2 className="nav-logo">
+        <h2 className="nav-logo text-cyan-500">
           <NavLink to={"/"}>HealthBooker</NavLink>
         </h2>
         <ul className="nav-links">
@@ -40,6 +40,9 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to={"/searchDoctors"}>Search Doctors</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/blogs"}>Doctor Blog</NavLink>
           </li>
           {token && user.isAdmin && (
             <li>

@@ -7,6 +7,8 @@ import { Protected, Public, Admin } from "./middleware/route";
 import React, { lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import SearchDoctor from "./pages/SearchDoctor";
+import "./index.css";
+import Blogs from "./pages/Blogs";
 
 const Home = lazy(() => import("./pages/Home"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -35,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/searchDoctors" element={<SearchDoctor />} />
+          <Route path="/blogs" element={<Blogs></Blogs>} />
           <Route
             path="/appointments"
             element={
