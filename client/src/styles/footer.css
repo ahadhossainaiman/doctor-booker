@@ -82,7 +82,7 @@ footer {
 
 @media screen and (max-width: 550px) {
   .social ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }

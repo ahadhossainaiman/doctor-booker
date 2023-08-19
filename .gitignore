@@ -108,3 +108,4 @@ dist
 /client/.vscode
 
 .node_modules
+.vercel

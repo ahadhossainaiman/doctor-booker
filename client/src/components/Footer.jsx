@@ -202,7 +202,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="footer-bottom">
-        Made by Ahad Hossain Aiman © {new Date().getFullYear()}
+        Made by Asif & Sazal © {new Date().getFullYear()}
       </div>
     </>
   );

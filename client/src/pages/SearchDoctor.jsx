@@ -55,7 +55,7 @@ const SearchDoctor = () => {
         {loading && <Loading />}
         {!loading && (
           <section className="container doctors">
-            <h2 className="page-heading">Our Doctorss</h2>
+            <h2 className="page-heading">Our Doctors</h2>
             <div class="wrap">
               <div>
                 <form action="" className="search">
