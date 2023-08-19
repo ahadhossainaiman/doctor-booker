@@ -15,7 +15,7 @@ const DoctorCard = ({ ele }) => {
   };
   console.log(ele);
   return (
-    <div className={`card`}>
+    <div className={`card create-button`}>
       <div className={`card-img flex-center`}>
         <img
           src={

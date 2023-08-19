@@ -20,9 +20,10 @@ const Contact = () => {
     <section
       className="register-section flex-center"
       id="contact"
+      style={{ backgroundColor: "#00B4CC" }}
     >
       <div className="contact-container flex-center contact">
-        <h2 className="form-heading">Contact Us</h2>
+        <h2 className="form-heading">CONTACT US</h2>
         <form
           method="POST"
           action="https://formspree.io/f/xkneldwn"
@@ -58,6 +59,7 @@ const Contact = () => {
           <button
             type="submit"
             className="btn form-btn"
+            style={{ backgroundColor: "red" }}
           >
             send
           </button>

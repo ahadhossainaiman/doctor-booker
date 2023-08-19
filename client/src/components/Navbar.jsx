@@ -28,43 +28,55 @@ const Navbar = () => {
   return (
     <header>
       <nav className={iconActive ? "nav-active" : ""}>
-        <h2 className="nav-logo text-cyan-500">
-          <NavLink to={"/"}>HealthBooker</NavLink>
+        <img
+          src="https://www.animatedimages.org/data/media/506/animated-health-image-0011.gif"
+          alt=""
+          style={{
+            width: "3%",
+            borderRadius: "40%",
+            border: "1px solid #00B4CC",
+          }}
+        />
+        <h2 className="nav-logo text-cyan-500 ">
+          <NavLink to={"/"}>HEALTH BOOKER</NavLink>
         </h2>
         <ul className="nav-links">
           <li>
-            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/"}>HOME</NavLink>
           </li>
           <li>
-            <NavLink to={"/doctors"}>Doctors</NavLink>
+            <NavLink to={"/doctors"}>DOCTORS</NavLink>
           </li>
           <li>
-            <NavLink to={"/searchDoctors"}>Search Doctors</NavLink>
+            <NavLink to={"/searchDoctors"}>SEARCH DOCTOR</NavLink>
           </li>
           <li>
-            <NavLink to={"/blogs"}>Doctor Blog</NavLink>
+            <NavLink to={"/blogs"}>DOCTOR BLOG</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/locations"}>LOCATION</NavLink>
           </li>
           {token && user.isAdmin && (
             <li>
-              <NavLink to={"/dashboard/users"}>Dashboard</NavLink>
+              <NavLink to={"/dashboard/users"}>DASHBOARD</NavLink>
             </li>
           )}
           {token && !user.isAdmin && (
             <>
               <li>
-                <NavLink to={"/appointments"}>Appointments</NavLink>
+                <NavLink to={"/appointments"}>APPOINTMENTS</NavLink>
               </li>
               <li>
-                <NavLink to={"/notifications"}>Notifications</NavLink>
+                <NavLink to={"/notifications"}>NOTIFICATION</NavLink>
               </li>
               <li>
-                <NavLink to={"/applyfordoctor"}>Apply for doctor</NavLink>
+                <NavLink to={"/applyfordoctor"}> APPLY FOR DOCTOR</NavLink>
               </li>
               <li>
-                <HashLink to={"/#contact"}>Contact Us</HashLink>
+                <HashLink to={"/#contact"}>CONTACT US</HashLink>
               </li>
               <li>
-                <NavLink to={"/profile"}>Profile</NavLink>
+                <NavLink to={"/profile"}>PROFILE</NavLink>
               </li>
             </>
           )}

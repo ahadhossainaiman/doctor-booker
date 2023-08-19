@@ -66,7 +66,7 @@ const SearchDoctor = () => {
                     value={searchTerm}
                     onChange={handleSearchTermChange}
                   />
-                  <button type="submit" className="searchButton">
+                  <button type="submit" className="searchButton border-2">
                     Reset
                   </button>
                 </form>

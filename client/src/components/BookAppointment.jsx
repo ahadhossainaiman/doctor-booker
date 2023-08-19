@@ -60,7 +60,7 @@ const BookAppointment = ({ setModalOpen, ele }) => {
             className="close-btn"
           />
           <div className="register-container flex-center book">
-            <form className="register-form">
+            <form className="register-form text-black">
               <input
                 type="date"
                 name="date"

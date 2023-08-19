@@ -21,6 +21,7 @@ const Doctors = () => {
     setDoctors(data);
     dispatch(setLoading(false));
   };
+  console.log(doctors);
 
   useEffect(() => {
     fetchAllDocs();
