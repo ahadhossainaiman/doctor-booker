@@ -77,7 +77,7 @@ const BookAppointment = ({ setModalOpen, ele }) => {
               />
               <button
                 type="submit"
-                className="btn form-btn"
+                className="btn form-btn bg-green-700"
                 onClick={bookAppointment}
               >
                 book

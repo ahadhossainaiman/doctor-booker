@@ -38,7 +38,7 @@ const Navbar = () => {
           }}
         />
         <h2 className="nav-logo text-cyan-500 ">
-          <NavLink to={"/"}>HEALTH BOOKER</NavLink>
+          <NavLink to={"/"}>MODERN MEDICARE</NavLink>
         </h2>
         <ul className="nav-links">
           <li>
