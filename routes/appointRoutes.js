@@ -6,7 +6,7 @@ const appointRouter = express.Router();
 
 appointRouter.get(
   "/getallappointments",
-  auth,
+auth,
   appointmentController.getallappointments
 );
 

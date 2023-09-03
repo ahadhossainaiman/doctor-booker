@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import HomeCircles from "../components/HomeCircles";
 import Map from "./Map";
 import Services from "../components/Services";
+import NursingCare from "./NursingCare";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Services />
+      <NursingCare />
       <img
         style={{ width: "100%", display: "block" }}
         className="my-16"
